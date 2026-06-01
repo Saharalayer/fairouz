@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: #fff7fb;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #d4af37, #f7c6d9);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #d4af37;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* Products */
+.products {
+  padding: 50px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card button {
+  background: #f7c6d9;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* About */
+.about, .contact {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #d4af37;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
