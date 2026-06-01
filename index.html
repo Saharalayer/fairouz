@@ -8,85 +8,138 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;}
+
 body{
-margin:0;
-font-family:'Cairo',sans-serif;
-background:#fff0f6;
-color:#333;
+background:#fff;
+color:#111;
 }
 
+/* HEADER */
 header{
-background:linear-gradient(90deg,#d4af37,#f7b6d2);
-padding:15px;
-text-align:center;
-color:white;
-font-size:24px;
-font-weight:bold;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+background:white;
 }
 
+.logo{
+font-weight:700;
+font-size:20px;
+letter-spacing:1px;
+}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* HERO */
 .hero{
-height:85vh;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-url('https://images.unsplash.com/photo-1520975958225-4d3c1f8b4b3d') center/cover;
-color:white;
+padding:20px;
+background:linear-gradient(180deg,#fff,#fff6fa);
 }
 
-.hero h1{font-size:40px;margin-bottom:10px;}
-.hero p{font-size:18px;}
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#666;
+font-size:18px;
+max-width:500px;
+}
+
 .btn{
 margin-top:20px;
+padding:12px 28px;
 background:#d4af37;
-padding:12px 25px;
-border:none;
 color:white;
+border:none;
 border-radius:30px;
 cursor:pointer;
+font-weight:600;
 }
 
-.products{
-padding:40px;
+/* PRODUCTS */
+.section{
+padding:60px 40px;
+}
+
+.title{
 text-align:center;
+font-size:28px;
+margin-bottom:30px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
-background:white;
-border-radius:15px;
+border:1px solid #eee;
+border-radius:16px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+background:white;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .card img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
 }
 
-.card h3{margin:10px 0;}
+.card-content{
+padding:15px;
+}
+
+.price{
+color:#d4af37;
+font-weight:bold;
+margin-top:5px;
+}
+
 .card button{
-background:#f7b6d2;
-border:none;
+margin-top:10px;
+width:100%;
 padding:10px;
-border-radius:20px;
+border:none;
+background:#111;
+color:white;
+border-radius:10px;
 cursor:pointer;
 }
 
 footer{
-background:#d4af37;
-color:white;
 text-align:center;
-padding:15px;
-margin-top:30px;
+padding:30px;
+border-top:1px solid #eee;
+color:#777;
 }
 </style>
 
@@ -94,38 +147,53 @@ margin-top:30px;
 
 <body>
 
-<header>ملاحف فيروز ✨</header>
+<header>
+<div class="logo">ملاحف فيروز</div>
+
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#products">الملاحف</a>
+<a href="#">من نحن</a>
+<a href="#">تواصل</a>
+</nav>
+</header>
 
 <section class="hero">
-<h1>أناقة وردية بلمسة ذهبية</h1>
-<p>اكتشفي أجمل الملاحف الفاخرة</p>
+<h1>أناقة الملاحف العصرية</h1>
+<p>تصاميم فاخرة تجمع بين البساطة والأنوثة بأسلوب حديث</p>
 <button class="btn">تسوقي الآن</button>
 </section>
 
-<section class="products">
-<h2>أحدث الملاحف</h2>
+<section class="section" id="products">
+<div class="title">الأكثر طلبًا</div>
 
 <div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<div class="card-content">
 <h3>ملحفة روز</h3>
-<p>199 درهم</p>
+<div class="price">199 درهم</div>
 <button>طلب عبر واتساب</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1618354691328-8b0b1c9a0b7b">
+<div class="card-content">
 <h3>ملحفة فيروز</h3>
-<p>249 درهم</p>
+<div class="price">249 درهم</div>
 <button>طلب عبر واتساب</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<div class="card-content">
 <h3>ملحفة ملكية</h3>
-<p>179 درهم</p>
+<div class="price">179 درهم</div>
 <button>طلب عبر واتساب</button>
+</div>
 </div>
 
 </div>
